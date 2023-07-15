@@ -17,7 +17,7 @@ sudo unshare -pf -n --mount-proc bash
 ps -afx
 ```
 Наблюдаем несколько родительских процессов, которые породили одинаковые процессы Bash.
-![ps -afx](1.1.1.png)
+![ps -afx](https://github.com/MariAntonova94/Containerization1/blob/main/file/1.1.1.jpd.jpg)
 
 Для проверки и наглядности смотрим той же командой ps -afx в изолированном терминале
 ![ps -afx](2.1.1.png)
