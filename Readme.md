@@ -20,19 +20,19 @@ ps -afx
 ![ps -afx](https://github.com/MariAntonova94/Containerization1/blob/main/file/1.1.1.jpd.jpg)
 
 Для проверки и наглядности смотрим той же командой ps -afx в изолированном терминале
-![ps -afx](2.1.1.png)
+![ps -afx](https://github.com/MariAntonova94/Containerization1/blob/main/file/2.1.1.jpd.jpg)
 Здесь мы сожем видеть, что изолированная оболчка видит всего два процесса (и то, второй процесс сразу же, после выполнения команды, исчезнет).
 
 * Далее, из этого же терминала, пробуем запустить пинг любого сайта, например ya.ru.
 ```
 ping ya.ru
 ```
- ![ps -afx](2.1.2.png)
+ ![ps -afx](https://github.com/MariAntonova94/Containerization1/blob/main/file/2.1.2.jpd.jpg)
  Наблюдаем, что пинг до указанного сайта не может быть осуществлен, так как сеть в этом пронстранстве имен имеется только локальная, т.е. localhost.
 
 
 А теперь, ту же команду запустим из параллельного терминала (котоый не изолирован).
-![ps -afx](1.1.2.png)
+![ps -afx](https://github.com/MariAntonova94/Containerization1/blob/main/file/1.1.2..jpd.jpg)
 Видим, что пакеты до сайта уходят нормально и ответ от сервера принимается.
 
 
@@ -40,7 +40,7 @@ ping ya.ru
 ```
 hostname
 ```
-![ps -afx](2.1.3.png)
+![ps -afx](https://github.com/MariAntonova94/Containerization1/blob/main/file/2.1.3.jpd.jpg)
 Как мы можем заметить - хоcт и там и там одинаков. А теперь, в изолированном терминале выполняем команду:
 ```
 sudo unshare -u bash
@@ -53,7 +53,7 @@ sudo unshare -u bash
 hostname mari2
 ```
 Эта команда никак не затронула хост основной системы. Можем проверить это, выполнив hostname в первом терминале и увидев, что имя хоста там не изменилось.
-![ps -afx](1.2.4.png)
+![ps -afx](https://github.com/MariAntonova94/Containerization1/blob/main/file/1.2.4jpd.png)
 
 
 Этими манипуляциями мы доказали, что научились запускать процессы в разных namespace с возможностью опционально изолировать нужные нам направления.
